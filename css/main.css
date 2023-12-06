@@ -1,0 +1,586 @@
+/*
+    - fonts
+    - general css
+    - billboard
+    - header
+    - about us
+    - speciality
+    - reservation
+    - contact us
+	- footer
+*/
+
+
+
+/*  Fonts  */
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('truetype'),
+         url('../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../fonts/raleway-semibold.eot');
+    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold.woff') format('woff'),
+         url('../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../fonts/raleway-bold.eot');
+    src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold.woff') format('woff'),
+         url('../fonts/raleway-bold.ttf') format('truetype'),
+         url('../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*  General CSS*/
+body{
+    background: #fff;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5{
+    color: #626262;
+    font-family: "raleway-regular", arial;
+    letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h1, h2, h3, h4,
+h5         { font-weight: bolder }
+
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    zoom: 1;  
+}
+
+
+
+/*    Billboard    */
+.billboard{
+    max-width: 100%;
+    height:92.37vh;
+    position: relative;
+}
+
+.billboard.light{
+    background: url('../img/homepage_pic.JPG') no-repeat;   
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.billboard .shadow{
+    position: absolute;
+    width: 100%;
+    height: 19.01vh;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../img/shadow.png') repeat-x;
+}
+
+.billboard .caption{
+    margin-top: 130px;
+    text-align: center;
+
+    max-width: 100%;
+}
+
+.billboard .caption.light{
+    color: #fff;
+}
+/* media query to make caption h1 in mobile view  */
+@media only screen and (max-width: 600px) {
+    .billboard .caption h1{
+        margin: 0 1em;
+    }
+    .billboard .caption p{
+        margin: 0 1em;
+    }
+  }
+
+
+
+.billboard .caption h1{
+    font-family: "raleway-bold";
+    font-size: 3em;
+    max-width: 100%;
+    font-weight: bold; 
+    margin-bottom: 0.8em;
+}
+
+.billboard .caption.light h1{
+    color: #fff;
+}
+
+.billboard .caption p{
+    font-family: "raleway-regular";
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
+}
+
+.billboard .caption.light p{
+    color: #fff;
+}
+
+
+.billboard .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;   
+    margin: 0;
+    padding: 0;
+}
+
+.billboard .caption.light hr{
+    background: #fff;
+}
+
+
+
+
+
+
+
+/*    header    */
+header{
+    width: 100%;
+    height: 15vh;
+    
+}
+
+
+header nav{
+  z-index: 99;
+  max-width: 100%;
+  background-color: #00000094;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: space-between;
+}
+/* make this header, nav, header nav, header nav ul , header nav ul li , header nav ul li a   reponsive to mobile view uing flex   */
+@media only screen and (max-width: 600px) {
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header{
+        height: 20vh;
+    }
+    header nav ul li {
+        font-size: 0.9em;
+        margin: 0.3em 0.8em;
+        padding:0.6em;
+    }
+  }
+
+
+header nav ul li{
+   list-style: none;
+  margin: 0.5em 1em;
+  padding: 1em ;
+  
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.3em;
+}
+
+header.light nav ul li a{  
+    color: white;
+}
+
+header.light nav ul li a:hover{
+    color: black;
+    background-color: red;
+}
+
+header nav ul li.active a{
+    background-color:#fff;
+    color:black;
+    padding: 0.3em;
+    }
+
+
+
+
+
+
+
+/*    Services    */
+.services ul{
+    margin-top: 30px;
+}
+
+.services ul li{
+    list-style: none;
+    display: block;
+    width: 313px;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.services ul li:first-child{
+    margin-left: 0;
+}
+
+.services ul li .separator{
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #f6f6f6;
+    margin: 20px auto;
+}
+
+.services ul li h2{
+    color: #616161;
+    font-family: "raleway-bold";
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.services ul li p{
+   color: #838181;
+    font-family: "raleway-regular";
+    font-size: 14px;
+    line-height: 28px; 
+    margin-top: 40px;
+    letter-spacing: .5px;
+}
+
+
+/*    services end    */
+
+.clearfix::before{
+    overflow:auto;}
+
+
+    /*    aboutus starts    */
+    .aboutme{margin-top: 40px;
+        width: 1400px;
+      display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  h4{
+    font-family:raleway,sans-serif;
+    text-align:center;
+    font-size:35px;
+    padding:60px;
+    color:#4b4741;
+    font-weight: 760;
+    }
+    h4 small
+    {font-size:65%;
+    color: #777;
+    font-weight: 450;
+    font-family: josefin sans,sans-serif;
+    border-bottom:3px solid teal;}
+
+
+    .font{
+        font-family: josefin sans,sans-serif;
+    color: #828281;
+    font-size: 22px;
+text-align:justify;
+margin-right: 130px;
+    }
+    .img3{
+        float: right;
+        margin-right: 100px;
+    }
+     /*    about us ends   */
+
+
+/*reservation*/
+.reservationn{margin-top: 70px;}
+
+    .margin{
+        margin:0px 0px 0px 200px;
+        border:1px solid white;
+      }
+      /* css form  */
+      input[type=text], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color:#f3f1ed;
+      }
+      input[type=email], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      background-color:#f3f1ed;
+      }
+      input[type=number], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      background-color:#f3f1ed;
+      }
+      input[type=date], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      background-color:#f3f1ed;
+      }
+      input[type=time], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      background-color:#f3f1ed;
+      }
+      input[type=tel], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      background-color:#f3f1ed;
+      }
+      
+      label { color: #333; 
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 400;}
+      
+      input[type=submit] {
+        width: 20%;
+        background-color:#f9c56a;
+        color: Black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left:40%;
+        font-size:20px;
+      }
+      
+      input[type=submit]:hover {
+        background-color:#b8860b;
+      }
+      .rescol {
+        float:left;
+        width: 33.33%;
+        padding:10px;
+        height: 300px;
+        border-right: 2px double white;
+      }
+      .content{
+        font-family:garamond;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          *{
+            box-sizing: border-box;
+            }
+            
+ /*    reservation ends   */
+
+
+/*    Contact us   */
+ h6{
+    text-align: left;
+    font-size: 21px;
+    font-weight:800;
+    font-family: raleway,sans-serif;
+    color:#4b4741 ;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+
+  .contactme{margin-top: 50px;}
+
+  .pp{
+    line-height: 40px;
+    font-family: josefin sans,sans-serif;
+     color: #828281;
+    font-size: 22px;
+    text-align:justify;}
+
+
+              .contact-social a {
+                display: inline-block;
+                background-color: #262526;
+                color: #fff;
+                padding: 0;
+                font-size: 20px;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            a, a:hover {
+                text-decoration: none;}
+
+
+                .open-button {
+                    background-color: #555;
+                    color: white;
+                    padding: 16px 20px;
+                    border: none;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    position: static;
+                    bottom: 23px;
+                    right: 23px;
+                    width: 280px;
+                    float: right;
+                  }
+                  
+                  /* ye hai popup form */
+                  .form-popup {
+                    display: none;
+                    position: fixed;
+                    bottom: 75px;
+                
+                    right: 190px;
+                    border: 3px solid #f1f1f1;
+                    z-index: 9;
+                  }
+                  
+                  /* Styles dala form container me apne */
+                  .form-container {
+                    max-width: 300px;
+                    padding: 10px;
+                    background-color: white;
+                  }
+                  
+                  /* Input fields */
+                  .form-container input[type=text], .form-container input[type=name] {
+                    width: 100%;
+                    padding: 15px;
+                    margin: 5px 0 22px 0;
+                    border: none;
+                    background: #f1f1f1;
+                  }
+                  
+                  /* When the inputs get focus, do something */
+                  .form-container input[type=text]:focus, .form-container input[type=email]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                  }
+                  
+                  /* Set a style for the submit/login button */
+                  .form-container .btn {
+                    background-color: #04AA6D;
+                    color: white;
+                    padding: 16px 20px;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    margin-bottom:10px;
+                    opacity: 0.8;
+                  }
+                  
+                  /* Add a red background color to the cancel button */
+                  .form-container .cancel {
+                    background-color: red;
+                  }
+                  
+                  /* Add some hover effects to buttons */
+                  .form-container .btn:hover, .open-button:hover {
+                    opacity: 1;
+                  }
+
+             /*contact us */   
+
+
+/*footer*/   
+  footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:   rgb(56,56,56);
+
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  footer p {
+    font-family: Verdana, sans-serif;  
+    color: #b3aeb5;
+    font-size: 15px;
+    text-align: center;
+  }
+  .top{margin-top: 50px;}
+
+  
